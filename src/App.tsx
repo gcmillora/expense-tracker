@@ -12,7 +12,6 @@ import { Input } from './components/ui/input'
 
 
 function App() {
-  const [count, setCount] = useState(0)
   const [expenses, setExpenses] = useState([
     { id: 1, description: 'Shopping', amount: 100, dateCreated: new Date() },
     { id: 2, description: 'Food', amount: 50, dateCreated: new Date() },

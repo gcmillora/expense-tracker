@@ -1,4 +1,3 @@
-import React from 'react'
 import {
     Table,
     TableBody,
@@ -10,12 +9,21 @@ import {
     TableRow,
 } from "@/components/ui/table"
 
+type Props = {
+    expenses: Expense[]
+}
+
+type Expense = {
+    id: number
+    description: string
+    amount: number
+    dateCreated: Date
+}
 
 
 
-
-const ExpenseTable = ({ expenses }) => {
-    const total: number = expenses.reduce((acc: number, expense: any) => acc + expense.amount, 0)
+const ExpenseTable = ({ expenses }: Props) => {
+    const total: number = expenses.reduce((acc: number, expense: Expense) => acc + expense.amount, 0)
     return (
         <Table>
             <TableCaption>List of Expenses</TableCaption>
